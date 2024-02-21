@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 60%;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: aliceblue;
+  /* scroll-snap-type: y mandatory; */
+  @apply lg:snap-y lg:snap-mandatory;
+  scroll-padding-top: 9rem;
+  scroll-snap-stop:normal;
+  overflow-y: scroll;
+}
+section{
+  scroll-snap-align: start;
+}
+@layer components {
+  .navlinks {
+    @apply rounded-[0.8rem] px-5 py-2 bg-transparent hover:text-stone-400 transition duration-200 ease-in-out bg-opacity-10;
+  }
+  .sm_btn {
+    @apply block m-auto border-2 p-3 my-5 rounded-md hover:bg-slate-700 transition duration-300;
+  }
+  .lg_btn {
+    @apply lg:w-[10rem]  my-8 text-2xl p-4;
+  }
+  .default_section {
+    @apply w-full h-screen;
+  }
+  #section_1 {
+    background: url(/asserts/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    background-position: center center;
+  }
+  #section_2 {
+    background: url(https://i.pinimg.com/originals/24/59/1f/24591f7a356e5181b737c74077a148b3.jpg);
+    background-position: center center;
+    background-size: 100% 100%;
+
+   @apply lg:h-[650px] h-[700px] lg:py-[23px];
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .paragraph {
+    @apply lg:text-3xl text-xl block mx-auto text-center mt-20 max-w-[70%] leading-[2.5] lg:leading-[2.5];
+  }
+  .short_para {
+    @apply lg:text-2xl text-xs block mt-5 mx-auto text-center max-w-[80%] lg:leading-[2] py-[10px];
+  }
+  .section_2_title {
+    @apply font-code text-6xl lg:text-8xl text-slate-600 text-center pt-[5rem];
+  }
+  .section_3_title {
+    @apply font-code text-3xl lg:text-6xl text-slate-600 text-center;
+  }
+  .about_sec ul li{
+    @apply p-4
+  }
+  .list_heading{
+    @apply font-extrabold text-center text-slate-600 lg:text-5xl text-3xl;
+  }
+  .about_sec ul{
+    @apply lg:text-3xl p-7 text-center text-xl ;
+  }
+  .about_sec ul a{
+    @apply hover:text-slate-400 duration-300 ease-in-out transition
+  }
+}
